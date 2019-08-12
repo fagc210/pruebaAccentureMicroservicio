@@ -1,0 +1,25 @@
+package com.accenture.apptest.pojo.converter;
+
+import java.awt.List;
+
+import com.accenture.apptest.domain.Empleados;
+import com.accenture.apptest.pojo.EmpleadosPojo;
+
+public class EmpleadosConverter {
+	
+	public List<EmpleadosPojo> Empleados2EmpleadosPojoList(){
+		
+	}
+	
+	public EmpleadosPojo Empleados2EmpleadosPojo(Empleados empleados){
+		
+		EmpleadosPojo empleadosPojo = new EmpleadosPojo();
+		empleadosPojo.setId(empleados.getId());
+		empleadosPojo.setName(empleados.getName());
+		empleadosPojo.setCedula(empleados.getCedula());
+		empleadosPojo.setEmail(empleados.getEmail());
+		return empleadosPojo;
+		
+	}
+
+}

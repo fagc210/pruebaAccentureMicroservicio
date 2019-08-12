@@ -1,0 +1,21 @@
+package com.accenture.apptest.domain;
+
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+
+public class Empleados {
+	
+	@Id
+	public ObjectId id;
+	
+	public String Name;
+	
+	public String email;
+	
+	public String cellPhone;
+	
+	
+	
+	
+
+}

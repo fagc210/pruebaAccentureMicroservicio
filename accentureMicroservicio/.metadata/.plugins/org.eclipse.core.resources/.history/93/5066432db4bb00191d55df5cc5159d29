@@ -1,0 +1,5 @@
+package com.accenture.apptest.repository;
+
+public class EmpleadosRepository {
+
+}

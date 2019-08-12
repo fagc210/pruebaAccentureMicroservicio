@@ -1,0 +1,30 @@
+package com.accenture.apptest.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.accenture.apptest.domain.Empleados;
+import com.accenture.apptest.pojo.EmpleadosPojo;
+import com.accenture.apptest.pojo.converter.EmpleadosConverter;
+import com.accenture.apptest.repository.EmpleadosRepository;
+import com.accenture.apptest.service.impl.EmpleadosServiceImpl;
+
+
+public interface EmpleadoService {
+	
+	private EmpleadosRepository empleadosRepository;
+	private EmpleadosConverter  empleadosConverter;
+	
+	@Override
+	public List<EmpleadosPojo> listar() {
+		
+		List<EmpleadosPojo> empleadosPojoList = new ArrayList<EmpleadosPojo>();
+		List<Empleados> empleadosList = empleadosRepository.findAll();
+		for (Empleados empleados : empleadosList) {
+			empleadosPojoList.add(empleadosConverter.converterEmpleados2EmpleadosPojo(empleados));
+		}
+		return empleadosPojoList;
+	}
+	
+	
+}

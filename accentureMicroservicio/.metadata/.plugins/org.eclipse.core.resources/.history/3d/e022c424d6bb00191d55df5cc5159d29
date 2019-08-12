@@ -1,0 +1,32 @@
+package com.accenture.apptest.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.accenture.apptest.domain.Empleados;
+import com.accenture.apptest.pojo.EmpleadosPojo;
+import com.accenture.apptest.pojo.converter.EmpleadosConverter;
+import com.accenture.apptest.repository.EmpleadosRepository;
+import com.accenture.apptest.service.EmpleadoService;
+@Service
+public class EmpleadoServiceImpl implements EmpleadoService{
+	@Autowired
+	private EmpleadosRepository empleadosRepository;
+	
+	private EmpleadosConverter  empleadosConverter;
+	
+	@Override
+	public List<EmpleadosPojo> listar() {
+		
+		List<EmpleadosPojo> empleadosPojoList = new ArrayList<EmpleadosPojo>();
+		List<Empleados> empleadosList = empleadosRepository.findAll();
+		for (Empleados empleados : empleadosList) {
+			empleadosPojoList.add(empleadosConverter.converterEmpleados2EmpleadosPojo(empleados));
+		}
+		return empleadosPojoList;
+	}
+
+}

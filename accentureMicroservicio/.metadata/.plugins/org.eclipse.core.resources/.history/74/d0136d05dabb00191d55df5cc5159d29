@@ -1,0 +1,48 @@
+package com.accenture.apptest.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.accenture.apptest.domain.Empleados;
+import com.accenture.apptest.pojo.EmpleadosPojo;
+import com.accenture.apptest.repository.EmpleadosRepository;
+import com.accenture.apptest.service.EmpleadoService;
+
+@RestController
+@RequestMapping("/empleados")
+public class EmpleadosController {
+	
+	@Autowired
+	private EmpleadosRepository empleadosRepository;
+	
+	@Autowired
+	private EmpleadoService empleadoService;
+	
+
+	@GetMapping("/listar")
+	public List<EmpleadosPojo> listar(){
+		List<EmpleadosPojo> lista = empleadoService.listar();
+		for (EmpleadosPojo empleadosPojo : lista) {
+			System.out.println(empleadosPojo.getName());
+			
+		}
+		return lista;
+		
+		
+	}
+	
+	@PostMapping("/crear")
+	public String crear(@RequestBody  Empleados empleado) {
+		empleadosRepository.save(empleado);
+		
+		return "se creo el empeleado" + empleado.getName();
+		
+		
+	}
+}

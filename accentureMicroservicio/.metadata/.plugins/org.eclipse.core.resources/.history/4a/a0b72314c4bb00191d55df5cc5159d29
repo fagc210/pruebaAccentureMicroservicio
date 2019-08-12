@@ -1,0 +1,22 @@
+package com.accenture.apptest.domain;
+
+import org.springframework.data.annotation.Id;
+
+public class Empleados {
+	
+	@Id
+	private int id;
+	
+	private String cedula;
+	
+	private String Name;
+	
+	private String email;
+	
+	private String cellPhone;
+
+	
+	
+	
+
+}

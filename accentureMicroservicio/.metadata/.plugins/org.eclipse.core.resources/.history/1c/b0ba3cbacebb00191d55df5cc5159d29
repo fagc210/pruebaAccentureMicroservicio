@@ -1,0 +1,16 @@
+package com.accenture.apptest.service;
+
+import java.util.List;
+
+import com.accenture.apptest.domain.Empleados;
+import com.accenture.apptest.service.impl.EmpleadosServiceImpl;
+
+private EmpleadosRepository empleadosRepository;
+
+public class EmpleadoService implements EmpleadosServiceImpl{
+	
+	public List<Empleados> listar(){
+		return empleadosRepository.findAll();
+	}
+
+}

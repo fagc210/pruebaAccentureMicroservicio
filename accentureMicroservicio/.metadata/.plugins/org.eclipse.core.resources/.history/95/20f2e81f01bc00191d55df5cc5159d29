@@ -1,0 +1,6 @@
+package com.accenture.apptest.domain;
+
+public class CuentaAhorros {
+	//ublic Long n
+
+}

@@ -1,0 +1,9 @@
+package com.accenture.apptest.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.accenture.apptest.domain.Empleados;
+
+public interface EmpleadosRepository extends MongoRepository<Empleados, ID>{
+
+}

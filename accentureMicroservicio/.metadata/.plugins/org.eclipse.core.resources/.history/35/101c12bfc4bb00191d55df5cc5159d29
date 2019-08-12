@@ -1,0 +1,59 @@
+package com.accenture.apptest.domain;
+
+import org.springframework.data.annotation.Id;
+
+public class Empleados {
+	
+	@Id
+	private int id;
+	
+	private int cedula;
+	
+	private String Name;
+	
+	private String email;
+	
+	private int cellPhone;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getCedula() {
+		return cedula;
+	}
+
+	public void setCedula(int cedula) {
+		this.cedula = cedula;
+	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getCellPhone() {
+		return cellPhone;
+	}
+
+	public void setCellPhone(int cellPhone) {
+		this.cellPhone = cellPhone;
+	}
+	
+
+}

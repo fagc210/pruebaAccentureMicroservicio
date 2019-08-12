@@ -1,0 +1,49 @@
+package com.accenture.apptest.pojo;
+
+public class EmpleadosPojo {
+
+	private int id;
+	
+	private int rocumentNumber;
+	
+	private String name;
+	
+	private String email;
+	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getDocumentNumber() {
+		return rocumentNumber;
+	}
+
+	public void setDocumentNumber(int cedula) {
+		this.rocumentNumber = cedula;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	
+	
+	
+}

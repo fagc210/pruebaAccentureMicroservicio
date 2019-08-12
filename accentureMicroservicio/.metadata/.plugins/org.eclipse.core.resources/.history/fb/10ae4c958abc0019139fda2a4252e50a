@@ -1,0 +1,36 @@
+package com.accenture.apptest.repository.impl;
+
+import java.util.List;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.accenture.apptest.domain.Empleados;
+import com.accenture.apptest.repository.EmpleadosRepository;
+
+public class EmpleadosRepositoryImpl implements  EmpleadosRepository {
+
+	@Override
+	public List<Empleados> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Empleados save(Empleados Empleados) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean deleteById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Empleados findById(Integer Id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

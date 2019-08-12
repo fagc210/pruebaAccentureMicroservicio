@@ -1,0 +1,12 @@
+package com.accenture.apptest.service.impl;
+
+import java.util.List;
+
+import com.accenture.apptest.domain.Empleados;
+import com.accenture.apptest.pojo.EmpleadosPojo;
+
+public interface EmpleadosServiceImpl {
+	
+	public List<EmpleadosPojo> listar();
+
+}

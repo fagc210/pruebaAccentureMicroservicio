@@ -1,0 +1,20 @@
+package com.accenture.apptest.repository;
+
+
+import java.util.List;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import com.accenture.apptest.domain.Empleados;
+import com.accenture.apptest.pojo.EmpleadosPojo;
+
+public interface EmpleadosRepository {
+	
+	public List<EmpleadosPojo> findAll();
+	
+	public String save(EmpleadosPojo EmpleadosPojo);
+	
+	public Boolean deleteById(Integer id);
+	
+	public EmpleadosPojo findById(Integer Id);
+    
+}

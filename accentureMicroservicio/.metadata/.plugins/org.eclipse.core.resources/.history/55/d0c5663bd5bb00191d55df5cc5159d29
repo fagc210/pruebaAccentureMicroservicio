@@ -1,0 +1,9 @@
+package com.accenture.apptest.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.accenture.apptest.service.EmpleadoService;
+@Service
+public class EmpleadoServiceImpl implements EmpleadoService{
+
+}
